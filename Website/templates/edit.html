@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/edit.css') }}">
+    <title>FARMOPS ALTISSIMO</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="pakan">
+            <p>PAKAN</p>
+        </div>
+
+    <div class="pengaturan">
+        <h2>PENGATURAN PAKAN</h2>
+    </div>
+    
+        <a href="/suhu"><div class="suhu">
+            <p>SUHU</p>
+        </div></a>
+          
+        <div class="boxLabel">
+            <div>
+                 <div class="label">
+                    <p>Pakan 1</p>  
+                </div>
+            </div>  
+
+            <div>
+                <div class="label">
+                   <p>Pakan 2</p>  
+               </div>
+           </div>
+
+           <div>
+            <div class="label">
+               <p>Pakan 3</p>  
+           </div>
+       </div>
+
+        </div>
+        <div > <form method="post">
+            <div class="boxInput">
+                <div><input class="input" type="time" name="jamPakan" value={{jamPakan}} /> </div>
+                <div><input class="input" type="time" name="jamPakan2" value={{jamPakan2}} /></div>
+                <div><input class="input" type="time" name="jamPakan3" value={{jamPakan3}} /></div>
+            </div> 
+            <input class="submit" type="submit" value="OK"> </input>
+        </form>
+        </div>
+
+        <div>
+            <img class="logo" src="{{ url_for('static',filename='img/logo.svg')}}" id="logo" width="80px"/>
+        </div>
+        <div id="tambah"> 
+            <img src="{{ url_for('static',filename='img/plus.svg')}}" />
+        </div>  
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <img src={{ url_for('static',filename='img/toggle.svg')}}>
+            </label>
+            <ul>
+                <label for="check" class="checkbtn">
+                    <img src={{ url_for('static',filename='img/toggle.svg')}}>
+                </label><br>
+                <li>
+                    <a href="/">Informasi</a>
+                </li>
+                <li><a href="/laporan">Laporan</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</body>
+
+</html>

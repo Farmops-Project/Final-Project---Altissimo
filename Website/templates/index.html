@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>FARMOPS ALTISSIMO</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="info">
+            <p>INFORMASI</p>
+        </div>
+
+        <a href="/edit"><button class="tombol">
+                <P>EDIT</P>
+            </button></a>
+
+        <div class="widget">
+            <div id="widgetBox">
+                <iframe class="item" width="152px" height="152px" frameborder="0" 
+                    src="https://stem.ubidots.com/app/dashboards/public/widget/n_lhPhRVIIhzlnglsZZwSP0vuZ8ZxRCZSP-Ewsqf1Xw?embed=true"></iframe>
+                <iframe class="item" width="152px" height="152px" frameborder="0"
+                    src="https://stem.ubidots.com/app/dashboards/public/widget/q5lediTOO_uMNJ6TCc31BgNNrH-36Sjc54Nnyikcepo?embed=true"></iframe>
+                <iframe class="item" width="152px" height="152px" frameborder="0"
+                    src="https://stem.ubidots.com/app/dashboards/public/widget/eZQDrBt5gdQIZvybAA7zY2jafBuguOyRDBHB-NXaVx0?embed=true"></iframe>
+                <iframe class="item" width="152px" height="152px" frameborder="0"
+                    src="https://stem.ubidots.com/app/dashboards/public/widget/P23ruZTwx9zaW8-G5Tro-4Hv0-9-PA-BXKvgc3C7xBw?embed=true"></iframe>
+            </div>
+        </div>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <img src={{ url_for('static',filename='img/toggle.svg')}}>
+            </label>
+            <ul>
+                <label for="check" class="checkbtn">
+                    <img src={{ url_for('static',filename='img/toggle.svg')}}>
+                </label><br>
+                <li>
+                    <a href="/">Informasi</a>
+                </li>
+                <li><a href="/laporan">Laporan</a></li>
+            </ul>
+        </nav>
+        <div>
+            <img class="logo" src="{{ url_for('static',filename='img/logo.svg')}}" id="logo" width="80px" />
+        </div>
+    </div>
+</body>
+
+</html>

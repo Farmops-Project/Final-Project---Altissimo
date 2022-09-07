@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/suhu.css') }}">
+    <title>FARMOPS ALTISSIMO</title>
+</head>
+
+<body>
+    <div class="container">
+        <a href="/edit">
+            <div class="pakan">
+                <p>PAKAN</p>
+            </div>
+        </a>
+
+        <div class="suhu">
+            <p>SUHU</p>
+        </div>
+
+        <div class="pengaturan">
+            <h2>PENGATURAN SUHU</h2>
+        </div>
+
+        <div class="boxLabel">
+
+            <div>
+                <div class="label">
+                    <p>Suhu max</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="label">
+                    <p>Suhu min</p>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="/"><div class="kotak">
+            <p>DONE</p>
+       </div></a>
+
+        <div>
+            <form method="post">
+                <div class="boxInput">
+                    <div><input class="input" type="text" name="tempHi" value={{tempMax}} /></div>
+                    <div><input class="input" type="text" name="tempLo" value={{tempMin}} /></div>
+                </div>
+                <input class="submit" type="submit" value="OK"> </input>
+            </form>
+        </div>
+        <div>
+            <img class="logo" src="{{ url_for('static',filename='img/logo.svg')}}" id="logo" width="80px" />
+        </div>
+
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <img src={{ url_for('static',filename='img/toggle.svg')}}>
+            </label>
+            <ul>
+                <label for="check" class="checkbtn">
+                    <img src={{ url_for('static',filename='img/toggle.svg')}}>
+                </label><br>
+                <li>
+                    <a href="/">Informasi</a>
+                </li>
+                <li><a href="/laporan">Laporan</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</body>
+
+</html>
