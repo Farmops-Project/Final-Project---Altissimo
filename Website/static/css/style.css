@@ -10,6 +10,12 @@
     background: #D1BE9C;
 }
 
+.indikator {
+    position: absolute;
+    left: 256px;
+    top: 41px;
+}
+
 .info {
     position: absolute;
     width: 180px;
@@ -157,7 +163,7 @@ nav ul li a {
     color: #5A3F2B;
 }
 
-.item{
+.item {
     border-radius: 10px;
 }
 

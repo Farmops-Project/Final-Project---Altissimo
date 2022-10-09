@@ -1,3 +1,4 @@
+    
 from flask import Flask, render_template, redirect, url_for, request
 import pymongo
 
@@ -7,16 +8,18 @@ client = pymongo.MongoClient("mongodb://altissimo:altissimo@ac-1k1ioje-shard-00-
 db = client['Farmops']
 inputPakan = db["input pakan"]
 inputSuhu = db["input temperatur"]
+indikator = db["indikator"]
 
 app = Flask(__name__)
 
 @app.route('/')
-def front():
-    return render_template('front.html')
-
-@app.route('/index')
 def index():
-    return render_template ('index.html')
+    for dataIndikator in indikator.find().sort([('_id', -1)]).limit(1):
+        if dataIndikator["power"] == 1:
+            pln = url_for('static',filename='img/pln.svg')
+        elif dataIndikator["power"] == 0:
+            pln = url_for('static',filename='img/btr.svg')
+    return render_template ('index.html',pln=pln)
 
 @app.route('/laporan')
 def laporan():
