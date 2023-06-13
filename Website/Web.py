@@ -1,4 +1,3 @@
-    
 from flask import Flask, render_template, redirect, url_for, request
 import pymongo
 
@@ -13,6 +12,10 @@ indikator = db["indikator"]
 app = Flask(__name__)
 
 @app.route('/')
+def front():
+    return render_template('front.html')
+
+@app.route('/index')
 def index():
     for dataIndikator in indikator.find().sort([('_id', -1)]).limit(1):
         if dataIndikator["power"] == 1:
