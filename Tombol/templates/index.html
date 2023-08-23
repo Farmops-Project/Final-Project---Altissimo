@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Ubidots Example</title>
+    <style>
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .on {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .off {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Web Ubidots Example</h1>
+    <form method="post">
+        <button type="submit" class="button {% if status == 1 %}on{% else %}off{% endif %}">{{ 'ON' if status == 1 else 'OFF' }}</button>
+    </form>
+</body>
+</html>
