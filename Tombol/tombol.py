@@ -22,10 +22,10 @@ def index():
 
 def build_payload(variable_1):
 
-    temperatur = 1
+    tombol = 1
     
     payload = {
-        variable_1: temperatur
+        variable_1: tombol
     }
     return payload
 
