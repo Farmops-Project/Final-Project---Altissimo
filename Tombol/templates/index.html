@@ -2,13 +2,17 @@
 <html>
 <head>
     <title>Flask Ubidots Example</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 <body>
     <h1>Ubidots Button Control</h1>
     <form method="POST">
         <button type="submit" name="button" value="toggle" class="custom-button {% if current_value == 1 %}on{% endif %}">
-            {% if current_value == 1 %}ON{% else %}OFF{% endif %}
+            {% if current_value == 1 %}
+            <img src="{{ url_for('static', filename='img/tombol.png') }}" alt="" width="30px" height="30px">
+            {% else %}
+            <img src="{{ url_for('static', filename='img/tombol.png') }}" alt="" width="30px" height="30px">
+            {% endif %}
         </button>
     </form>
     <p>Current value: {{ current_value }}</p>
